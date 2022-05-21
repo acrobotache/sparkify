@@ -1,9 +1,9 @@
 # Sparkify
 ## Project Summary/Motivation
-This is "Udacity Data Scientist Nanodegree" Capstone project. It leverages 'Spark' big data framework. 'Sparkify' is an imaginary music streaming service that logs every user action as an event. Sparkify service is similar to 'Spotify' or 'Pandora' which are the digital music services using which users stream their favourite songs through the service every day. Some users use free-tiers that play advertisements between the streaming, and some users use premium subscription model where they stream the music ad. free, also pay amount associated. Users can upgrade, downgrade or cancel their service at any time. So, it's crucial to make sure that users love the service. If we can accurately identify users who will cancel the service, our business can provide them discount or incentives before they leave. This will save the business in millions of revenue. So,  The challenge is to use pyspark - Spark API in the python to extract insight and create meaningful features from raw data that allow us to predict which customer will cancel the service.
+This is "Udacity Data Scientist Nanodegree" Capstone project. It leverages 'Spark' big data framework. 'Sparkify' is an imaginary music streaming service that logs every user action as an event. Sparkify service is similar to 'Spotify' or 'Pandora' which are the digital music services using which users stream their favourite songs through the service every day. Some users use free-tiers that play advertisements between the streaming, and some users use paid premium subscription model where they stream the music ad. free. Users can upgrade, downgrade or cancel their service at any time. So, it's crucial to make sure that users love the service. If we can accurately identify users who will cancel the service, our business can provide them discount or incentives before they leave. This will save millions of business revenue. So,  the challenge is to use pyspark - Spark API in the python to extract insight and create meaningful features from raw data that allow us to predict which customer will cancel the service.
 ## Files Description
 #### 1. Sparkify.ipynb    
-A Python notebook which explores a smaller subset with the spark. The subset, mini_sparkify_event_data.json if of 128 MB. We are executing the following steps on top of this smaller subset of Sparkify data.
+A Python notebook which explores a smaller subset with the spark. The subset, mini_sparkify_event_data.json is of 128 MB. We are executing the following steps on top of this smaller subset of Sparkify data.
  - load and clean dataset
  - exploratory data analysis
  - define 'churn' using 'cancellation confirmation' page event
@@ -11,15 +11,15 @@ A Python notebook which explores a smaller subset with the spark. The subset, mi
  - predictive modelling(churn classification)  
 
 #### 2. requirements.txt
-This file contains python libraries to be installed prior to run the application notebook.
-Below are the import libraries:
+This file contains python libraries to be installed before running the python notebook.
+Below are the required python libraries:
 1. pyspark
 2. numpy
 3. pandas
 4. seaborn
 5. matplotlib
 
-## Create a python environment, or a conda environment to run the project on local.
+## Create a python environment, or a conda environment to run the project on local machine.
  - Python Environment
     - Install Python 3.8.x version or latest python version 
     - open command prompt and run following command to install required python dependencies
@@ -47,9 +47,11 @@ We used below 4 classification machine learning algorithms for training.
 - Decision Tree
 - Random Forest
 - Support Vector Machine 
+
 After training we calculated f1-score on the test dataset. We got below evaluation result:
 ![Screenshot 2](images/evaluation-results.png) 
 
+You can find my [blog post](https://medium.com/@deshmukhps95/user-churn-prediction-using-spark-959e3cab1a46) on medium for understanding complete flow and results from the project.
 **Observations:**
 - From the evaluation results above, it seems that LogisticRegression model is outperforming DecisionTreeClassifier, RandomForest and LinearSVC models.
 - We got f1-score = 0.71 for logistic regression.
